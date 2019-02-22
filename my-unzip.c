@@ -40,6 +40,11 @@
 	
 	int main(int argc, char *arg[])
 	{
+		
+		if(argc<1){
+		printf("my-unzip: file1 [file2 ...]\n");
+		exit(1);
+		}
 		char *line = NULL;
 		size_t len = 0;
 		ssize_t nread;
