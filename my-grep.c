@@ -16,7 +16,7 @@ int main(int argc, const char* arg[])
 		printf("Please enter a sentence\n");
 		nread = getline(&line, &len, stdin);
 		if(strstr(line, needle) != NULL){
-		printf("Bullseye\n");
+		printf("Word located!\n");
 		}
 		exit(0);
 	}
@@ -28,10 +28,8 @@ int main(int argc, const char* arg[])
 				exit(1);
 		}
 	while((nread = getline(&line, &len, fp)) != -1) {
-		printf("Retrieved line of length %zu:\n", nread);
-		printf("%s", line);
 		if(strstr(line, needle) != NULL){
-			printf("Bullseye\n");
+			printf("Word Located!\n");
 		}
 	}
 	int closeCheck = fclose(fp);
