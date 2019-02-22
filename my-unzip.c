@@ -2,11 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#define MAX_RLEN 50
 
 	char* decode(char* src){
-		int rLen;
-		char count[MAX_RLEN];
 		int lenn = strlen(src);
 		char* dest = (char*)malloc(sizeof(char) * (100));
 
