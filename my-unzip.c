@@ -12,7 +12,7 @@
 
 		int i, j, k=0;
 
-		char* holdNonDigit;
+		char holdNonDigit[1];
 		char storeDigit[20];
 		int numPlace = 0;
 		for(i = 0;i<lenn;i++){
@@ -25,7 +25,7 @@
 				storeDigit[0] = 0;
 			}
 			if(!(isdigit(src[i]))){
-				*holdNonDigit = src[i];
+				holdNonDigit[0] = src[i];
 				numPlace = 0;
 			}
 			if(isdigit(src[i])){
